@@ -6,5 +6,20 @@
     list-style: none;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+
+.App {
+    position: absolute;
+    background-image: url('./background.jpg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position: top;
+    background-size: cover;
+    height: 100%;
+    /* width: 100%; */
+}
+
+.header-app{
+
+}
 

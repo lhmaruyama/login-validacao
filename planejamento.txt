@@ -1,14 +1,54 @@
 *INICIAR REATC E NODE
-*MENU RESPONSIVO E DROPDOWN
+*MENU RESPONSIVO
 *FOOTER
 *PAGE LOGIN
 *PAGE CADASTRO
 *PAGE PERFIL
 *PAGE INICIAL
 *PAGE CONTATO
+*MENU DROPDOWN
 *PAGE SUBMENU 1
 *PAGE SUBMENU 2
 *PAGE SUBMENU 3
 
 *REMOVER FAVCON OU ADICIONAR OUTRO
 
+--------------------
+<div class="box duration-1"></div>
+<div class="box duration-2"></div>
+<div class="box duration-3"></div>
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.transformed-state {
+  transform: rotate(270deg);
+  background-color: blue;
+  color: yellow;
+  font-size: 12px;
+}
+
+.duration-1 {
+  transition-duration: 0.5s;
+}
+
+.duration-2 {
+  transition-duration: 2s;
+}
+
+.duration-3 {
+  transition-duration: 4s;
+}
+
+function change() {
+  const elements = document.querySelectorAll("div.box");
+  for (const element of elements) {
+    element.classList.toggle("transformed-state");
+  }
+}
+
+const changeButton = document.querySelector("#change");
+changeButton.addEventListener("click", change);

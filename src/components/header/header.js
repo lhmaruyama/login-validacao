@@ -1,8 +1,34 @@
 import React from "react";
+import Logo from './logo.png'
+import Icon from './icon.png'
 import './style.css'
 
 const Header = () => {
-    return ( <div>Header</div>);
+    let control = false
+    function display() {
+        control =! control
+        const menu = document.querySelector('.list')
+        if(control == true){
+            menu.style.display = 'block'
+        }else{
+            menu.style.display = 'none'
+        }
+        
+    }
+    return (
+        <nav className="header-menu">
+            <a href="#"><img className="logo" src={Logo}/></a>
+            <div className="menu">
+                <ul className="list">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">DROPDOWN</a></li>
+                    <li><a href="#">LOGIN</a></li>
+                </ul>
+            </div>
+            <img onClick={()=>display()} className="icon" src={Icon}/>
+        </nav>    
+    );
 }
 export default Header
 

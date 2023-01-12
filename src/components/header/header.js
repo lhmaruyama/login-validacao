@@ -9,7 +9,7 @@ const Header = () => {
         control =! control
         const menu = document.querySelector('.list')
         if(control == true){
-            menu.style.display = 'block'
+            menu.style.display = 'flex'
         }else{
             menu.style.display = 'none'
         }
@@ -22,11 +22,9 @@ const Header = () => {
                 <ul className="list">
                     <li><a href="#">HOME</a></li>
                     <li><a href="#">CONTACT</a></li>
-                    <li><a href="#">DROPDOWN</a></li>
                     <li><a href="#">LOGIN</a></li>
                 </ul>
             </div>
-            <img onClick={()=>display()} className="icon" src={Icon}/>
         </nav>    
     );
 }

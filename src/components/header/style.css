@@ -1,81 +1,48 @@
 .header-menu {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-items: center;
+    /* justify-content: center; */
+    /* justify-content: space-between; */
     /* padding: 3rem; */
-    height: 5rem;
-    /* width: 90%; */
+    /* height: 5rem; */
+    /* width: 100%; */
     /* background-color: #a52a2a50; */
     /* background-color: #1593b350; */
     /* background-color: #c9af2050; */
     /* background-color: #1fb4da40; */
-    background-color: #ffffff70;
-    box-shadow: 0px 0px 3px 1px #00000050;
-    margin: 5px;
-    border-radius: 15px;
-
 }
+
 a {
     text-decoration: none;
     color: initial;
 }
+
 .logo {
-    height: 4.5rem;
+    height: 5.5rem;
     padding-left: 7%;
     filter: brightness(0%);
     /* box-shadow: 2px 2px 6px black; */
 }
+
 .menu {
-    display: flex;
-    padding-right: 2%;
+    /* display: flex; */
+    /* padding-right: 2%; */
+    width: 100%;
+    background-color: #ffffff70;
+    box-shadow: 0px 0px 3px 1px #00000050;
+    /* margin: 50px; */
+    border-radius: 15px;
 }
+
 .list {
     list-style: none;
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 25px;
-}
-.list-dropdown {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.icon {
-    display: none;
-    transition-duration: 2s;
-
-}
-
-@media screen and (max-width:600px){
-    .menu {
-        /* display: flex; */
-        /* flex-direction: column; */
-        /* width: 150px; */
-        /* height: 400px; */
-        /* max-height: 0; */
-        /* overflow: hidden; */
-    }
-    .icon {
-/*         display: block;
-        cursor: pointer;
-        transition-duration: 2s; */
-
-    }
-    .list {
-        /* display: none; */
-        /* position: absolute; */
-        /* flex-direction: column; */
-        /* align-items: center; */
-        /* padding: 30px; */
-        /* margin-top: 30px; */
-        /* transition-duration: 2s; */
-    }
-    .header label {
-/*         display: inline-flex;
-        align-items: center;
-        cursor: pointer; */
-    }
+    /* align-items: center; */
+    gap: 80px;
+    height: 50px;
 }
 

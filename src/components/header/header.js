@@ -2,6 +2,7 @@ import React from "react";
 import Logo from './logo.png'
 import Icon from './icon.png'
 import './style.css'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     let control = false
@@ -17,12 +18,12 @@ const Header = () => {
     }
     return (
         <nav className="header-menu">
-            <a href="#"><img className="logo" src={Logo}/></a>
+            <Link to='/'><img className="logo" src={Logo}/></Link>
             <div className="menu">
                 <ul className="list">
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                    <li><a href="#">LOGIN</a></li>
+                <Link to='/'><li>HOME</li></Link>
+                <Link to='/contact'><li>CONTACT</li></Link>
+                <Link to='/login'><li>LOGIN</li></Link>
                 </ul>
             </div>
         </nav>    

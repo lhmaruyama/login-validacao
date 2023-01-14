@@ -9,7 +9,7 @@
     padding: 30px;
     border-radius: 4%;
     box-shadow: 3px 3px 1px 0px #00000060;
-    width: 380px;
+    width: 400px;
 }
 
 h1 {
@@ -55,7 +55,7 @@ h1 {
 .label-float input:focus + label,.label-float input:valid + label {
     font-size: 13px;
     margin-top: 0;
-     color: #188d91;
+    color: #188d91;
 }
 
 button {
@@ -80,3 +80,18 @@ button:hover{
     display: flex;
     justify-content: center;
 }
+
+#msgError{
+     text-align: center;
+     padding: 10px;
+     border-radius: 4px;
+     display: none;
+}
+
+#msgSucess{
+     text-align: center;
+     padding: 10px;
+     border-radius: 4px;
+     display: none;
+}
+

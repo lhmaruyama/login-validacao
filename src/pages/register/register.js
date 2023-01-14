@@ -1,23 +1,50 @@
 import React from "react";
 import './style.css'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
-
-    
+    //localStorage.clear()
+    const navigate =  useNavigate()
     let validConfirmSenha = false
     let validSenha = false
     let validUsuario = false
     let validNome = false
-    
+    console.log(validNome,' ' + validUsuario,' ' + validSenha,' ' + validConfirmSenha)
+
     function cadastrar(){
+
+        console.log(validNome,' ' + validUsuario,' ' + validSenha,' ' + validConfirmSenha)
+        let nome = document.querySelector('#nome')
+        let usuario = document.querySelector('#usuario')
+        let senha = document.querySelector('#senha')
+        let msgError = document.querySelector("#msgError")
+        let msgSucess = document.querySelector("#msgSucess")
         if (validNome && validUsuario && validSenha && validConfirmSenha){
-            alert('ok')
+            let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
+            listaUser.push({
+                nomeCad: nome.value,
+                userCad: usuario.value,
+                senhaCad: senha.value
+            })
+    
+            localStorage.setItem('listaUser', JSON.stringify(listaUser))
+
+            msgError.setAttribute('style', 'display: none')
+            msgError.innerHTML = ''
+            msgSucess.setAttribute('style', 'display: block')
+            msgSucess.innerHTML = 'Cadastro realizado, abrindo página de login'
+
+            setTimeout(() => {
+                navigate('/login')
+            }, 2500);
+
+
         }else{
-            alert('N ok')
-
+            msgSucess.setAttribute('style', 'display: none')
+            msgSucess.innerHTML = ''
+            msgError.setAttribute('style', 'display: block')
+            msgError.innerHTML = 'Preencha os dados corretamente'
         }
-
     }
     
     function validacaoNome(){
@@ -41,7 +68,7 @@ const Register = () => {
     }
 
     function validacaoUsuario(){
-        let usuario = document.querySelector('#usario')
+        let usuario = document.querySelector('#usuario')
         let labelUsuario = document.querySelector('#labelUsuario')
 
         usuario.addEventListener('keyup',()=>{
@@ -63,7 +90,8 @@ const Register = () => {
     function validacaoSenha(){
         let senha = document.querySelector('#senha')
         let labelSenha = document.querySelector('#labelSenha')
-
+        let confirmSenha = document.querySelector('#confirmSenha')
+        let labelConfirmSenha = document.querySelector('#labelConfirmSenha')
         senha.addEventListener('keyup',()=>{
             if(senha.value.length <= 5){
                 labelSenha.setAttribute('style', 'color: red')
@@ -75,6 +103,17 @@ const Register = () => {
                 labelSenha.innerHTML = 'Senha'
                 senha.setAttribute('style', 'border-color: green')
                 validSenha = true
+            }
+            if(senha.value != confirmSenha.value){
+                labelConfirmSenha.setAttribute('style', 'color: red')
+                labelConfirmSenha.innerHTML = 'As senhas não conferem'
+                confirmSenha.setAttribute('style', 'border-color: red')
+                validConfirmSenha = false
+            }else{
+                labelConfirmSenha.setAttribute('style', 'color: green')
+                labelConfirmSenha.innerHTML = 'Confirmar Senha'
+                confirmSenha.setAttribute('style', 'border-color: green')
+                validConfirmSenha = true
             }
         })
     }
@@ -88,11 +127,11 @@ const Register = () => {
             if(senha.value != confirmSenha.value){
                 labelConfirmSenha.setAttribute('style', 'color: red')
                 labelConfirmSenha.innerHTML = 'As senhas não conferem'
-                senha.setAttribute('style', 'border-color: red')
+                confirmSenha.setAttribute('style', 'border-color: red')
                 validConfirmSenha = false
             }else{
                 labelConfirmSenha.setAttribute('style', 'color: green')
-                labelConfirmSenha.innerHTML = 'Confirmar Senha'
+                labelConfirmSenha.innerHTML = 'As senhas são idênticas'
                 confirmSenha.setAttribute('style', 'border-color: green')
                 validConfirmSenha = true
             }
@@ -105,12 +144,16 @@ const Register = () => {
         <div className="container">
             <div className="card">
                 <h1>Cadastrar</h1>
+                <div id="msgError"></div>
+                <div id="msgSucess"></div>
+
+
                 <div className="label-float">
                     <input onKeyUp={()=>validacaoNome()} type="text" id="nome" placeholder="" required/>
                     <label id="labelNome" htmlFor="nome">Nome</label>
                 </div>
                 <div className="label-float">
-                    <input onKeyUp={()=>validacaoUsuario()} type="text" id="usario" placeholder="" required/>
+                    <input onKeyUp={()=>validacaoUsuario()} type="text" id="usuario" placeholder="" required/>
                     <label id="labelUsuario" htmlFor="usuario">Usuario</label>
                 </div>
                 <div className="label-float">

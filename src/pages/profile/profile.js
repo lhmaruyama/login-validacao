@@ -2,7 +2,7 @@ import React from "react";
 import './style.css'
 
 const Profile = () => {
-    return ( <div>Profile</div>);
+    return ( <div>VOCE ESTA NA PAGINA DO SEU PERFIL</div>);
 }
 export default Profile
 

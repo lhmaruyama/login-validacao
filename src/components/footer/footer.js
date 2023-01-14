@@ -16,7 +16,7 @@ const Footer = () => {
             <a href="#"><img className="icon" src={Whats}/></a>
             <a href="#"><img className="icon" src={Youtube}/></a>
         </div>
-        <a href="#"><span className="footer-text">Todos os direitos reservados</span></a>
+        <span className="footer-text"><a href="#">Todos os direitos reservados</a></span>
     </div>
     );
 }

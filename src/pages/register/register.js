@@ -10,12 +10,19 @@ const Register = () => {
     let validUsuario = false
     let validNome = false
     
+    function cadastrar(){
+        if (validNome && validUsuario && validSenha && validConfirmSenha){
+            alert('ok')
+        }else{
+            alert('N ok')
 
+        }
+
+    }
     
     function validacaoNome(){
         let nome = document.querySelector('#nome')
         let labelNome = document.querySelector('#labelNome')
-
 
         nome.addEventListener('keyup',()=>{
             if(nome.value.length <= 2){
@@ -93,15 +100,7 @@ const Register = () => {
     }
 
 
-    function cadastrar(){
-        if (validNome && validUsuario && validSenha && validConfirmSenha){
-            alert('ok')
-        }else{
-            alert('N ok')
 
-        }
-
-    }
     return (
         <div className="container">
             <div className="card">

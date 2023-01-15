@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.perfil {
+    font-size: 30px;
+    color: aliceblue;
+    text-align: center;
+}
+
+.dados {
+    font-size: 30px;
+    color: aliceblue;
+    text-align: center;
+}
+
+
+.sair {
+    width: 120px;
+    background-color: transparent;
+    border-color: black;
+    padding: 7px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}

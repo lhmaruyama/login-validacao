@@ -4,8 +4,8 @@ import './style.css'
 
 const Initial = () => {
     return (
-        <div>
-            Initial
+        <div className="inicial">
+            ESTA É A PÁGINA INICIAL
         </div>
     );
 }

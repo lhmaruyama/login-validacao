@@ -18,24 +18,29 @@ const Login = () => {
         let userValid = {
             nome: '',
             user: '',
-            senha: ''
+            senha: '',
+            id: ''
         }
 
-        listaUser = JSON.parse(localStorage.getItem('listaUser'))
+        listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
 
-        listaUser.forEach(item => {
+        console.log(listaUser)
+
+        listaUser.forEach((item) => {
             if(usuario.value == item.userCad && senha.value == item.senhaCad){
                 userValid = {
                     nome: item.nomeCad,
                     user: item.userCad,
-                    senha: item.senhaCad
+                    senha: item.senhaCad,
+                    id: item.idUser
                 }
             }
-
         })
 
+
         if(usuario.value == userValid.user && senha.value == userValid.senha){
-            navigate('/profile')
+            navigate('/profile/' + userValid.id)
+            console.log(listaUser)
         }else{
             userLabel.setAttribute('style', 'color: red')
             usuario.setAttribute('style', 'color: red')

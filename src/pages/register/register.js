@@ -9,22 +9,26 @@ const Register = () => {
     let validSenha = false
     let validUsuario = false
     let validNome = false
-    console.log(validNome,' ' + validUsuario,' ' + validSenha,' ' + validConfirmSenha)
+    //console.log(validNome,' ' + validUsuario,' ' + validSenha,' ' + validConfirmSenha)
 
     function cadastrar(){
 
-        console.log(validNome,' ' + validUsuario,' ' + validSenha,' ' + validConfirmSenha)
+        //console.log(validNome,' ' + validUsuario,' ' + validSenha,' ' + validConfirmSenha)
         let nome = document.querySelector('#nome')
         let usuario = document.querySelector('#usuario')
         let senha = document.querySelector('#senha')
         let msgError = document.querySelector("#msgError")
         let msgSucess = document.querySelector("#msgSucess")
+
+        let token = Math.random().toString(16).substring(2)
+        
         if (validNome && validUsuario && validSenha && validConfirmSenha){
             let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
             listaUser.push({
                 nomeCad: nome.value,
                 userCad: usuario.value,
-                senhaCad: senha.value
+                senhaCad: senha.value,
+                idUser: token
             })
     
             localStorage.setItem('listaUser', JSON.stringify(listaUser))

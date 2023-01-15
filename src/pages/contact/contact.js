@@ -2,7 +2,7 @@ import React from "react";
 import './style.css'
 
 const Contact = () => {
-    return ( <div>Contact</div>);
+    return ( <div className="contato"> ESTA É A PÁGINA DE CONTATO</div>);
 }
 export default Contact
 

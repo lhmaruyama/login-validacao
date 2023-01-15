@@ -1,3 +1,8 @@
+
+## Sobre a aplicação:
+Neste projeto meu objetivo foi avançar um pouco mais nos estudos de back end e ainda colocar em prática as aulas de React e validação de dados. Decidi então criar um site onde é possível fazer cadastro e login de usuário, e usei o localStorage para armazenar os dados salvos e depois fazer a autenticação. Fiz uso do react-router-dom para a navegação das páginas. 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

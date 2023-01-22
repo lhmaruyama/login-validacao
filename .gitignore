@@ -1,12 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-login1.PNG
-login2.PNG
-login3.PNG
-login4.PNG
-login5.PNG
-
-
 # dependencies
 /node_modules
 /.pnp

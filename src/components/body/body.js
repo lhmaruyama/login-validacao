@@ -11,11 +11,11 @@ const Body = () => {
     return ( 
         <div className='div-body'>
             <Routes>
-                <Route path='http://localhost:3000/' element={<Initial/>}/>
-                <Route path='http://localhost:3000/contact' element={<Contact/>}/>
-                <Route path='http://localhost:3000/login' element={<Login/>}/>
-                <Route path='http://localhost:3000/register' element={<Register/>}/>
-                <Route path='http://localhost:3000/profile/:id' element={<Profile/>}/>
+                <Route path='/' element={<Initial/>}/>
+                <Route path='/contact' element={<Contact/>}/>
+                <Route path='/login' element={<Login/>}/>
+                <Route path='/register' element={<Register/>}/>
+                <Route path='/profile/:id' element={<Profile/>}/>
             </Routes>
         </div>
     );

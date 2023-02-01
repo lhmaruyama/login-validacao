@@ -39,7 +39,7 @@ const Login = () => {
 
 
         if(usuario.value === userValid.user && senha.value === userValid.senha){
-            navigate('http://localhost:3000/profile/' + userValid.id)
+            navigate('/profile/' + userValid.id)
             console.log(listaUser)
         }else{
             userLabel.setAttribute('style', 'color: red')
@@ -72,7 +72,7 @@ const Login = () => {
             <div className="justify-center">
                 <hr></hr>
             </div>
-            <span>Não tem uma conta? <Link to="http://localhost:3000/register" className="link"><p>Castastre-se</p></Link></span>
+            <span>Não tem uma conta? <Link to="register" className="link"><p>Castastre-se</p></Link></span>
         </div>
     </div>    
     

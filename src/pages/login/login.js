@@ -27,7 +27,7 @@ const Login = () => {
         console.log(listaUser)
 
         listaUser.forEach((item) => {
-            if(usuario.value == item.userCad && senha.value == item.senhaCad){
+            if(usuario.value === item.userCad && senha.value === item.senhaCad){
                 userValid = {
                     nome: item.nomeCad,
                     user: item.userCad,
@@ -38,8 +38,8 @@ const Login = () => {
         })
 
 
-        if(usuario.value == userValid.user && senha.value == userValid.senha){
-            navigate('/profile/' + userValid.id)
+        if(usuario.value === userValid.user && senha.value === userValid.senha){
+            navigate('http://localhost:3000/profile/' + userValid.id)
             console.log(listaUser)
         }else{
             userLabel.setAttribute('style', 'color: red')
@@ -72,7 +72,7 @@ const Login = () => {
             <div className="justify-center">
                 <hr></hr>
             </div>
-            <span>Não tem uma conta? <Link to="/register" className="link"><p>Castastre-se</p></Link></span>
+            <span>Não tem uma conta? <Link to="http://localhost:3000/register" className="link"><p>Castastre-se</p></Link></span>
         </div>
     </div>    
     

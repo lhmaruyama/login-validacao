@@ -10,13 +10,13 @@ const Footer = () => {
     return (
     <div className="footer-menu">
         <div className="icons">
-            <a href="#"><img className="icon" src={Email}/></a>
-            <a href="#"><img className="icon" src={Face}/></a>
-            <a href="#"><img className="icon" src={Insta}/></a>
-            <a href="#"><img className="icon" src={Whats}/></a>
-            <a href="#"><img className="icon" src={Youtube}/></a>
+            <a href="https://github.com/lhmaruyama/login-validacao"><img alt="" className="icon" src={Email}/></a>
+            <a href="https://github.com/lhmaruyama/login-validacao"><img alt="" className="icon" src={Face}/></a>
+            <a href="https://github.com/lhmaruyama/login-validacao"><img alt="" className="icon" src={Insta}/></a>
+            <a href="https://github.com/lhmaruyama/login-validacao"><img alt="" className="icon" src={Whats}/></a>
+            <a href="https://github.com/lhmaruyama/login-validacao"><img alt="" className="icon" src={Youtube}/></a>
         </div>
-        <span className="footer-text"><a href="#">Todos os direitos reservados</a></span>
+        <span className="footer-text"><a href="https://github.com/lhmaruyama/login-validacao">Todos os direitos reservados</a></span>
     </div>
     );
 }

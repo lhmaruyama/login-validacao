@@ -1,6 +1,6 @@
 import React from "react";
 import './style.css'
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
     //localStorage.clear()
@@ -108,7 +108,7 @@ const Register = () => {
                 senha.setAttribute('style', 'border-color: green')
                 validSenha = true
             }
-            if(senha.value != confirmSenha.value){
+            if(senha.value !== confirmSenha.value){
                 labelConfirmSenha.setAttribute('style', 'color: red')
                 labelConfirmSenha.innerHTML = 'As senhas não conferem'
                 confirmSenha.setAttribute('style', 'border-color: red')
@@ -128,7 +128,7 @@ const Register = () => {
         let labelConfirmSenha = document.querySelector('#labelConfirmSenha')
         let senha = document.querySelector('#senha')
         confirmSenha.addEventListener('keyup',()=>{
-            if(senha.value != confirmSenha.value){
+            if(senha.value !== confirmSenha.value){
                 labelConfirmSenha.setAttribute('style', 'color: red')
                 labelConfirmSenha.innerHTML = 'As senhas não conferem'
                 confirmSenha.setAttribute('style', 'border-color: red')

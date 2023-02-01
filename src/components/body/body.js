@@ -1,6 +1,6 @@
 import React from "react";
 import './style.css';
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 import Initial from '../../pages/initial/initial'
 import Contact from '../../pages/contact/contact'
 import Login from '../../pages/login/login'

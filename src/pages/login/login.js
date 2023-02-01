@@ -72,7 +72,7 @@ const Login = () => {
             <div className="justify-center">
                 <hr></hr>
             </div>
-            <span>Não tem uma conta? <Link to="register" className="link"><p>Castastre-se</p></Link></span>
+            <span>Não tem uma conta? <Link to="/register" className="link"><p>Castastre-se</p></Link></span>
         </div>
     </div>    
     
